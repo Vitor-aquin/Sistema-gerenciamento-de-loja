@@ -1,23 +1,24 @@
 import random
 
-#dicionario que armazena os produtos da loja
+# Dicionário que armazena os produtos da loja
 produtos = {
-    "Arroz": {"preço": 20,00, "estoque" 50}
-    "Feijão": {"preço": 10,00, "estoque" 30:}
-    "Macarrão": {"preço": 5,00, "estoque" 40:}
+    "Arroz": {"preço": 20.00, "estoque": 50},
+    "Feijão": {"preço": 10.00, "estoque": 30},
+    "Macarrão": {"preço": 5.00, "estoque": 40},
 }
 
-#variavel que armazena o total de venda realizadas
-total_venda = 0.0
+# Variável que armazena o total de vendas realizadas
+total_vendas = 0.0
 
-#função para cadastrarum novo produto
+# Função para cadastrar um novo produto
 def cadastrar_produto():
-    nome = input("digite o nome do produto: ")
-    preco = float(input(f"digite o preço de {nome}: "))
-    estoque = int(input(f"digite a quantidade em  estoque de {nome}: "))
-    print(f"produto {nome} cadastrado  com sucesso!\n")
+    nome = input("Digite o nome do produto: ")
+    preco = float(input(f"Digite o preço de {nome}: "))
+    estoque = int(input(f"Digite a quantidade em estoque de {nome}: "))
+    produtos[nome] = {"preço": preco, "estoque": estoque}
+    print(f"Produto {nome} cadastrado com sucesso!\n")
 
- # Função para exibir os produtos disponíveis
+# Função para exibir os produtos disponíveis
 def exibir_produtos():
     print("\nProdutos disponíveis:")
     for produto, info in produtos.items():
